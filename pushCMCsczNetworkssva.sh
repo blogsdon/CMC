@@ -6,7 +6,7 @@
 #$ -N scz_sva_cmc_networks
 #$ -e error_scz_sva.txt
 #$ -o out_scz_sva.txt
-
+#$ -pe orte 8
 
 #cases
 #/shared/metanetworkSynapse/pushNet.sh -a "syn4549880" -b "/shared/CMC/codeScz.txt" -c "/shared/CMC/synSVA.txt" -defghijklmnopqv -r "SVA" -s "HomoSapiens" -t "Schizophrenia" -u "DLPFC" -x "/shared/metanetworkSynapse/pushNetworkSynapse.R"

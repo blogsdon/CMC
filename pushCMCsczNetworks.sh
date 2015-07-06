@@ -6,7 +6,7 @@
 #$ -N scz_cmc_networks
 #$ -e error_scz.txt
 #$ -o out_scz.txt
-
+#$ -pe orte 8
 
 #cases
 #/shared/metanetworkSynapse/pushNet.sh -a "syn3526289" -b "/shared/CMC/codeScz.txt" -c "/shared/CMC/syn.txt" -defghijklmnopqv -r "None" -s "HomoSapiens" -t "Schizophrenia" -u "DLPFC" -x "/shared/metanetworkSynapse/pushNetworkSynapse.R"
