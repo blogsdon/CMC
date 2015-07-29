@@ -9,6 +9,7 @@ getAllNetworks <- function(x){
   return(sparseNetwork)
 }
 
+
 #get ppi
 
 ppisyn <- synGet('syn4552965')
