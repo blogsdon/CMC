@@ -7,7 +7,6 @@ getAllNetworks <- function(x){
   y <- synGet(x)
   load(y@filePath)
   return(sparseNetwork)
-  
 }
 
 #get ppi
