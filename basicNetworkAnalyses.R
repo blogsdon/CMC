@@ -17,7 +17,7 @@ cmcSVATFSummary <- read.delim(SVATFExpressionSummary@filePath, stringsAsFactors 
 
 
 
-require(metaNet)
+require(metanetwork)
 networks <- sapply(res$file.id,loadData)
 names(networks) <- res$file.method
 #netStat
