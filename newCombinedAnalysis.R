@@ -1,5 +1,10 @@
 require(synapseClient)
 synapseLogin()
+synResult <- synQuery('select name,id from file where projectId==\'syn3455058\' and networkStorageType==\'sparse\' and normalization==\'None\' and disease==\'Schizophrenia\'')
+
+
+
+
 
 
 getAllNetworks <- function(x){
@@ -14,7 +19,7 @@ getAllNetworks <- function(x){
 
 ppisyn <- synGet('syn4552965')
 load(ppisyn@filePath)
-synResult <- synQuery('select name,id from file where projectId==\'syn3455058\' and networkStorageType==\'sparse\'')
+synResult <- synQuery('select name,id from file where projectId==\'syn3455058\' and networkStorageType==\'sparse\' and normalization==\'None\' and disease==\'Schizophrenia\'')
 
 computePower <- function(net,true){
   power <- sum(net!=0 & true !=0)/(sum(true!=0)/2)

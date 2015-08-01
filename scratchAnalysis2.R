@@ -6,6 +6,9 @@ synapseLogin()
 a <- synGet('syn4553095')
 load(a@filePath)
 
+
+hubness <- rowSums(sparseNetwork)
+
 #sparse graph
 require(igraph)
 graph2 <- graph_from_adjacency_matrix(sparseNetwork,mode='undirected')

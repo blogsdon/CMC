@@ -5,6 +5,27 @@ synapseLogin()
 
 a <- synGet('syn4553095')
 load(a@filePath)
+
+#sparse graph
+require(igraph)
+graph2 <- graph_from_adjacency_matrix(sparseNetwork,mode='undirected')
+res <- cluster_fast_greedy(graph2)
+spar_mods <- membership(res)
+keep<-which(table(spar_mods)>20)
+spar_mods <- spar_mods[which(spar_mods%in%keep)]
+
+table(spar_mods)
+
+
+
+b <- synGet('syn4550165')
+key <- read.csv(b@filePath)
+
+
+
+
+
+
 net <- as.matrix(sparseNetwork)
 ne <- rowSums(net)
 
