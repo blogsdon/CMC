@@ -6,7 +6,7 @@
 #$ -N control_cmc_networks
 #$ -e error_control.txt
 #$ -o out_control.txt
-#$ -pe orte 8
+#$ -pe orte 16
 
 
 #controls
