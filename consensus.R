@@ -2,7 +2,7 @@
 
 require(bit64)
 require(dplyr)
-load('result_aracneFull.rda')
+load('result_lassoAIC.rda')
 network <- as.matrix(network)
 network <- network+t(network)
 gc()
@@ -33,7 +33,7 @@ internal <- function(str,w1){
   save(aggregateRank,file='aggregateRank.rda')
 }
 
-methods <- c('result_lassoAIC.rda','result_lassoBIC.rda','result_lassoCV1se.rda','result_lassoCVmin.rda','result_ridgeAIC.rda','result_ridgeBIC.rda','result_ridgeCV1se.rda','result_ridgeCVmin.rda','result_sparrowZ.rda','result_sparrow2Z.rda','result_tigress.rda')
+methods <- c('result_lassoBIC.rda','result_lassoCV1se.rda','result_lassoCVmin.rda','result_ridgeAIC.rda','result_ridgeBIC.rda','result_ridgeCV1se.rda','result_ridgeCVmin.rda','result_sparrowZ.rda','result_sparrow2Z.rda','result_tigress.rda')
 
 sapply(methods,internal,whichUpperTri)
 

@@ -9,4 +9,4 @@
 #$ -pe orte 16
 
 rm aggregateRank.rda
-Rscript /shared/ROSMAP/consensus.R
+Rscript /shared/CMC/consensus.R
