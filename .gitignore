@@ -67,3 +67,8 @@ sczModNet.csv
 sczModules.csv
 sczNetwork.csv
 wgcnaVsMntScz.png
+.DS_Store
+ACC.ensembl.DxSCZ.DE.KNOWN_AND_NO_HIDDEN_CONFOUND.ADJUSTED.VOOM_NORMALIZED.LIMMA_FIT.tsv
+DLPFC.ensembl.DxSCZ.DE.KNOWN.ADJUSTED.VOOM_NORMALIZED.LIMMA_FIT.tsv
+schizophrenia.cys
+sczModule.csv
