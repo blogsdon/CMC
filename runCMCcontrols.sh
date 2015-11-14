@@ -33,8 +33,8 @@ qsub -v dataFile="../CMC/controlDataSVA.csv",pathv="/shared/metanetworkSynapse/"
 
 qsub -v dataFile="../CMC/controlData.csv",pathv="/shared/metanetworkSynapse/",ridgeCVmin=1,numberCore=543,outputpath="/shared/CMC/controlNetworks/nosva/" -pe orte 543 buildNet.sh
 
-qsub -v s3="s3://metanetworks/CMC/controlNetworks/nosva/",dataFile="/shared/ROSMAP/controlData.csv",pathv="/shared/metanetworkSynapse/",tigressRootN=1,elasticNetAIC=1,elasticNetBIC=1,elasticNetCVmin=1,elasticNetCV1se=1,numberCore=320,outputpath="/shared/CMC/controlNetworks/nosva/" -pe orte 320 -S /bin/bash -V -cwd -N cmcControl -e /shared/CMC/controlNetworks/nosva/error.txt -o /shared/CMC/controlNetworks/nosva/out.txt buildNet.sh
-qsub -v s3="s3://metanetworks/CMC/controlNetworks/sva/",dataFile="/shared/ROSMAP/controlDataSVA.csv",pathv="/shared/metanetworkSynapse/",tigressRootN=1,elasticNetAIC=1,elasticNetBIC=1,elasticNetCVmin=1,elasticNetCV1se=1,numberCore=320,outputpath="/shared/CMC/controlNetworks/sva/" -pe orte 320 -S /bin/bash -V -cwd -N cmcControlSVA -e /shared/CMC/controlNetworks/sva/error.txt -o /shared/CMC/controlNetworks/sva/out.txt buildNet.sh
+qsub -v s3="s3://metanetworks/CMC/controlNetworks/nosva/",dataFile="/shared/CMC/controlData.csv",pathv="/shared/metanetworkSynapse/",tigressRootN=1,elasticNetAIC=1,elasticNetBIC=1,elasticNetCVmin=1,elasticNetCV1se=1,numberCore=320,outputpath="/shared/CMC/controlNetworks/nosva/" -pe orte 320 -S /bin/bash -V -cwd -N cmcControl -e /shared/CMC/controlNetworks/nosva/error.txt -o /shared/CMC/controlNetworks/nosva/out.txt buildNet.sh
+qsub -v s3="s3://metanetworks/CMC/controlNetworks/sva/",dataFile="/shared/CMC/controlDataSVA.csv",pathv="/shared/metanetworkSynapse/",tigressRootN=1,elasticNetAIC=1,elasticNetBIC=1,elasticNetCVmin=1,elasticNetCV1se=1,numberCore=320,outputpath="/shared/CMC/controlNetworks/sva/" -pe orte 320 -S /bin/bash -V -cwd -N cmcControlSVA -e /shared/CMC/controlNetworks/sva/error.txt -o /shared/CMC/controlNetworks/sva/out.txt buildNet.sh
 
 
 

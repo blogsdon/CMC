@@ -28,8 +28,8 @@ qsub -v dataFile="../CMC/sczData.csv",pathv="/shared/metanetworkSynapse/",sparro
 
 #new submissions
 qsub -v dataFile="../CMC/sczDataSVA.csv",pathv="/shared/metanetworkSynapse/",tigress=1,numberCore=479,outputpath="/shared/CMC/sczNetworks/sva/" -pe orte 479 buildNet.sh
-qsub -v s3="s3://metanetworks/CMC/sczNetworks/nosva/",dataFile="/shared/ROSMAP/sczData.csv",pathv="/shared/metanetworkSynapse/",tigressRootN=1,elasticNetAIC=1,elasticNetBIC=1,elasticNetCVmin=1,elasticNetCV1se=1,numberCore=320,outputpath="/shared/CMC/sczNetworks/nosva/" -pe orte 320 -S /bin/bash -V -cwd -N cmcscz -e /shared/CMC/sczNetworks/nosva/error.txt -o /shared/CMC/sczNetworks/nosva/out.txt buildNet.sh
-qsub -v s3="s3://metanetworks/CMC/sczNetworks/sva/",dataFile="/shared/ROSMAP/sczDataSVA.csv",pathv="/shared/metanetworkSynapse/",tigressRootN=1,elasticNetAIC=1,elasticNetBIC=1,elasticNetCVmin=1,elasticNetCV1se=1,numberCore=320,outputpath="/shared/CMC/sczNetworks/sva/" -pe orte 320 -S /bin/bash -V -cwd -N cmcsczSVA -e /shared/CMC/sczNetworks/sva/error.txt -o /shared/CMC/sczNetworks/sva/out.txt buildNet.sh
+qsub -v s3="s3://metanetworks/CMC/sczNetworks/nosva/",dataFile="/shared/CMC/sczData.csv",pathv="/shared/metanetworkSynapse/",tigressRootN=1,elasticNetAIC=1,elasticNetBIC=1,elasticNetCVmin=1,elasticNetCV1se=1,numberCore=320,outputpath="/shared/CMC/sczNetworks/nosva/" -pe orte 320 -S /bin/bash -V -cwd -N cmcscz -e /shared/CMC/sczNetworks/nosva/error.txt -o /shared/CMC/sczNetworks/nosva/out.txt buildNet.sh
+qsub -v s3="s3://metanetworks/CMC/sczNetworks/sva/",dataFile="/shared/CMC/sczDataSVA.csv",pathv="/shared/metanetworkSynapse/",tigressRootN=1,elasticNetAIC=1,elasticNetBIC=1,elasticNetCVmin=1,elasticNetCV1se=1,numberCore=320,outputpath="/shared/CMC/sczNetworks/sva/" -pe orte 320 -S /bin/bash -V -cwd -N cmcsczSVA -e /shared/CMC/sczNetworks/sva/error.txt -o /shared/CMC/sczNetworks/sva/out.txt buildNet.sh
 
 
 #qsub -v dataFile="../CMC/controlData.csv",pathv="/shared/metanetworkSynapse/ARACNE/",aracne=1,correlation=1,numberCore=8 -pe orte 8 buildNet.sh
