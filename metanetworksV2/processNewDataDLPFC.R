@@ -2,14 +2,14 @@
 require(synapseClient)
 library(dplyr)
 library(utilityFunctions)
-
+library(bit64)
 synapseLogin()
 
 covariatesObj <- synGet('syn5570053')
 residualExpressionObj <- synGet('syn5570051')
 
 library(data.table)
-library(utilityFunctions)
+
 cmcCovariates <- fread(covariatesObj@filePath,data.table=F,stringsAsFactors=F)
 cmcExpression <- fread(residualExpressionObj@filePath,data.table=F,stringsAsFactors=F)
 
