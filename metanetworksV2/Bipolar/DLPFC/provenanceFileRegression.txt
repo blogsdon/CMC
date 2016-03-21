@@ -4,4 +4,4 @@ syn5570053,FALSE
 https://github.com/blogsdon/metanetwork/commit/55b77c52bf3a55570a06c61ae0bd3434dba77e77,TRUE
 https://github.com/blogsdon/metanetworkSynapse/commit/c3942ffe4d69f681f7fdc25d5fc9267f5e90e2ea,TRUE
 https://github.com/blogsdon/CMC/blob/ba4fa6071ab6ffedc069257846673d916970893c/metanetworksV2/Bipolar/DLPFC/cmcBipolarRegressionSubmission.sh,TRUE
-https://github.com/blogsdon/CMC/blob/ba4fa6071ab6ffedc069257846673d916970893c/metanetworksV2/processNewDataDLPFC.R,TRUE
+https://github.com/blogsdon/CMC/blob/147e6ca8424326c181e43e668009500fa9bca05b/metanetworksV2/processNewDataDLPFC.R,TRUE
