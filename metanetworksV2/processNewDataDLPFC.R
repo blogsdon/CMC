@@ -23,21 +23,21 @@ BipolarCov <- dplyr::filter(cmcCovariates,Dx=='AFF')
 cmcExpression2[dplyr::filter(cmcCovariates,Dx=='AFF')$`DLPFC_RNA_isolation: Sample RNA ID`,] %>%
   apply(2,utilityFunctions::winsorize) %>%
   scale %>%
-  write.csv(file='cmcDLPFCBipolarRNASeq.csv',quote=F)
+  write.csv(file='cmcDLPFCBipolarRNAseq.csv',quote=F)
 
 #MCI
 cmcExpression2[dplyr::filter(cmcCovariates,Dx=='SCZ')$`DLPFC_RNA_isolation: Sample RNA ID`,] %>%
   apply(2,utilityFunctions::winsorize) %>%
   scale %>%
-  write.csv(file='cmcDLPFCSchizophreniaRNASeq.csv',quote=F)
+  write.csv(file='cmcDLPFCSchizophreniaRNAseq.csv',quote=F)
 
 #AD
 cmcExpression2[dplyr::filter(cmcCovariates,Dx=='Control')$`DLPFC_RNA_isolation: Sample RNA ID`,] %>%
   apply(2,utilityFunctions::winsorize) %>%
   scale %>%
-  write.csv(file='cmcDLPFCControlRNASeq.csv',quote=F)
+  write.csv(file='cmcDLPFCControlRNAseq.csv',quote=F)
 
 cmcExpression2 <- apply(cmcExpression2,2,utilityFunctions::winsorize)
 cmcExpression2 <- scale(cmcExpression2)
 
-write.csv(cmcExpression2,file='cmcDLPFCRNASeq.csv',quote=F)
+write.csv(cmcExpression2,file='cmcDLPFCRNAseq.csv',quote=F)
