@@ -1,0 +1,8 @@
+fileType,csv
+dataType,analysis
+analysisType,statisticalNetworkReconstruction
+normalizationStatus,TRUE
+organism,HomoSapiens
+study,CMC
+tissueTypeAbrv,ACC
+disease,Schizophrenia
