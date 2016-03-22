@@ -3,5 +3,5 @@ syn5570057,FALSE
 syn5570059,FALSE
 https://github.com/blogsdon/metanetwork/commit/55b77c52bf3a55570a06c61ae0bd3434dba77e77,TRUE
 https://github.com/blogsdon/metanetworkSynapse/commit/c3942ffe4d69f681f7fdc25d5fc9267f5e90e2ea,TRUE
-https://github.com/blogsdon/CMC/blob/ba4fa6071ab6ffedc069257846673d916970893c/metanetworksV2/Full/DLPFC/cmcFullRegressionSubmission.sh,TRUE
+https://github.com/blogsdon/CMC/blob/95dbe1a051d25f424bfb1af8eaa1ef4e02244361/metanetworksV2/Full/ACC/cmcFullRegressionSubmission.sh,TRUE
 https://github.com/blogsdon/CMC/blob/aaccda355f1fc199882a97459fa3548da73e7f0c/metanetworksV2/processNewDataACC.R,TRUE
