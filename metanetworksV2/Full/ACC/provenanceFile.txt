@@ -3,5 +3,5 @@ syn5570057,FALSE
 syn5570059,FALSE
 https://github.com/blogsdon/metanetwork/commit/549fe5e83e211b326362cb4371b9b2e1f4949c4a,TRUE
 https://github.com/blogsdon/metanetworkSynapse/commit/09c8ef074776d94dea797257c480f418e913ff88,TRUE
-https://github.com/blogsdon/CMC/blob/95dbe1a051d25f424bfb1af8eaa1ef4e02244361/metanetworksV2/Bipolar/ACC/cmcBipolarBuildConsensus.sh,TRUE
+https://github.com/blogsdon/CMC/blob/fc013fa575e3fe0ef9f02063a9639edb489d55fd/metanetworksV2/Full/ACC/cmcFullBuildConsensus.sh,TRUE
 https://github.com/blogsdon/CMC/blob/aaccda355f1fc199882a97459fa3548da73e7f0c/metanetworksV2/processNewDataACC.R,TRUE
