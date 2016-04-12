@@ -18,10 +18,10 @@ outputpath="/local/CMC/metanetworksV2/Full/DLPFC/"
 s3b="CMC/metanetworksV2/Full/DLPFC"
 
 #id of folder with networks to combine
-networkFolderId="syn5816040"
+networkFolderId="syn5816035"
 
 #id of folder on Synapse that file will go to
-parentId="syn5816040"
+parentId="syn5816035"
 
 #path to csv file with annotations to add to file on Synapse
 annotationFile="/shared/CMC/metanetworksV2/Full/DLPFC/annoFile.txt"
