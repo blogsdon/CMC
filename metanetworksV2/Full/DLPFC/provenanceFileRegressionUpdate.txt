@@ -1,0 +1,7 @@
+provenance,executed
+syn5570051,FALSE
+syn5570053,FALSE
+https://github.com/blogsdon/metanetwork/commit/544c830ebe20cfdcd97505d5df0bfa03ae8f8f06,TRUE
+https://github.com/blogsdon/metanetworkSynapse/commit/3bc557f36bcaebe6811e22c1e6027eb4dda5a0b4,TRUE
+https://github.com/blogsdon/CMC/blob/9e460a8f11de67754cf5937275d8938a886a033b/metanetworksV2/Full/DLPFC/cmcFullRegressionSubmissionUpdate.sh,TRUE
+https://github.com/blogsdon/CMC/blob/375d00a588914c865116656f0bbd6d8d1fc46b14/metanetworksV2/processNewDataDLPFC.R,TRUE
