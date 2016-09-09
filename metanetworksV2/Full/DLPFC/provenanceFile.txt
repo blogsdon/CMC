@@ -1,7 +1,7 @@
 provenance,executed
 syn5570051,FALSE
 syn5570053,FALSE
-https://github.com/blogsdon/metanetwork/commit/549fe5e83e211b326362cb4371b9b2e1f4949c4a,TRUE
-https://github.com/blogsdon/metanetworkSynapse/commit/09c8ef074776d94dea797257c480f418e913ff88,TRUE
+https://github.com/blogsdon/metanetwork/commit/544c830ebe20cfdcd97505d5df0bfa03ae8f8f06,TRUE
+https://github.com/blogsdon/metanetworkSynapse/commit/3bc557f36bcaebe6811e22c1e6027eb4dda5a0b4,TRUE
 https://github.com/blogsdon/CMC/blob/d0e0ee470b6d68d528d823cda83bae2d1b2ecf5f/metanetworksV2/Full/DLPFC/cmcFullBuildConsensus.sh,TRUE
 https://github.com/blogsdon/CMC/blob/aaccda355f1fc199882a97459fa3548da73e7f0c/metanetworksV2/processNewDataDLPFC.R,TRUE
