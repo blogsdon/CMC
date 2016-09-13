@@ -25,6 +25,7 @@ pgc2 <- dplyr::filter(geneMappingTable2,geneSet=='PGC2') %>% dplyr::select(ensem
 
 
 pgc2Dist <- metanetwork::computeDriverDistance(pgc2$ensembl_gene_id,graph1)
+pgc2Dist2 <- metanetwork::computeDriverDistancePvalue(pgc2$ensembl_gene_id,graph1,nsamp=100)
 
 pgc2DistTab <- data.frame(pgc2Dist = pgc2Dist,ensembl_gene_id=names(pgc2Dist),stringsAsFactors=F)
 pgc2DistTab <- merge(pgc2DistTab,geneMappingTable,by='ensembl_gene_id')
@@ -42,6 +43,7 @@ degDistTab <- dplyr::arrange(degDistTab,degDist)
 
 lof <- dplyr::filter(geneMappingTable2,geneSet=='SCZ.LoF') %>% dplyr::select(ensembl_gene_id)
 
+degDist <- metanetwork::computeDriverDistance(deg$ensembl_gene_id,graph1)
 lofDist <- metanetwork::computeDriverDistance(lof$ensembl_gene_id,graph1)
 
 lofDistTab <- data.frame(lofDist = lofDist,ensembl_gene_id=names(lofDist),stringsAsFactors=F)
