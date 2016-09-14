@@ -3,7 +3,66 @@ synapseLogin()
 foo <- synGet('syn7222231')
 load(foo@filePath)
 
+##########make a plot of the bic path
+png(file='~/Desktop/bicCMCplot.png',pointsize=44,height=1280,width=1600)
+plot(2*(8e4:1e5),log10(bicNetworks$bicPath[8e4:1e5]),'l',lwd=3,col='red',xlab='Number of Edges in the Network',ylab='log10 BIC fit criterion',main='Model selection for GGM Network')
+dev.off()
+
+
+
+
+
+###########download RIMBAnet file
+rimbaObj <- synGet('syn7113487')
+rimba <- read.delim(rimbaObj@filePath,stringsAsFactors=F,row.names=NULL,header=F)
+
+ensembl=biomaRt::useMart('ENSEMBL_MART_ENSEMBL',
+                         dataset = 'hsapiens_gene_ensembl',
+                         host='www.ensembl.org')
+
+genes<-biomaRt::getBM(attributes = c('ensembl_gene_id','external_gene_name'),
+             filters='ensembl_gene_id',
+             values=colnames(bicNetworks$network),
+             mart=ensembl)
+longForm <- which(bicNetworks$network + t(bicNetworks$network) !=0,T)
+
+longForm2 <- longForm
+longForm2[,1] <- colnames(bicNetworks$network)[longForm[,1]]
+longForm2[,2] <- colnames(bicNetworks$network)[longForm[,2]]
+
+hgnc <- genes$external_gene_name
+names(hgnc) <- genes$ensembl_gene_id
+longForm <- longForm2
+longForm[,1] <- hgnc[longForm2[,1]]
+longForm[,2] <- hgnc[longForm2[,2]]
+
+longForm <- longForm[which(!is.na(longForm[,1])),]
+longForm <- longForm[which(!is.na(longForm[,2])),]
+dim(rimba)
+
+rimbaEdges <- apply(rimba,1,paste0,collapse='_')
+mNedges <- apply(longForm,1,paste0,collapse='_')
+
+length(rimbaEdges)
+length(mNedges)
+rimbaEdges2 <- rimbaEdges[rimbaEdges%in%mNedges]
+rimbaEdges2 <- t(sapply(rimbaEdges2,function(x){return(strsplit(x,'_')[[1]])}))
+write.csv(rimbaEdges2,file='~/Desktop/intersectNet.csv',quote=F,row.names=F)
+#173810/2
+tab1 <- cbind(c(269534113,7009),c(169972,3835))
+
+fisher.test(tab1)
+
 graph1 <- utilityFunctions::convertSparseMatrixToGraph(bicNetworks$network)
+library(VennDiagram)
+venn.plot <- venn.diagram(list(
+  rimbaEdges = rimbaEdges,
+  metanetworkEdges = mNedges),
+  filename= NULL
+)
+
+
+barplot((c(173810,10844,3835)))
 
 
 fastGreedy <- igraph::fastgreedy.community(graph1)
